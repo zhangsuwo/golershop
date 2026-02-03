@@ -2,12 +2,12 @@ server:
   # 应用名称
   name: "golershop-server"
   
-  #address:     ":8000"
+  #address:     ":8080"
   #openapiPath: "/api.json"
   #swaggerPath: "/swagger"
 
   # 基本配置
-  address: ":8000"                        # 本地监听地址。默认":80"
+  address: ":8080"                        # 本地监听地址。默认":80"
   httpsAddr: ":443"                       # TLS/HTTPS配置，同时需要配置证书和密钥。默认关闭
   httpsCertPath: ""                           # TLS/HTTPS证书文件本地路径，建议使用绝对路径。默认关闭
   httpsKeyPath: ""                           # TLS/HTTPS密钥文件本地路径，建议使用绝对路径。默认关闭
@@ -105,63 +105,63 @@ database:
     ctxKeys: [ "RequestId" ]
 
   default:
-    link: "mysql:modulith_open:pwd@tcp(localhost:3306)/modulith_open?loc=Local&parseTime=true"
+    link: "mysql:modulith_open:pwd@tcp(106.14.156.6:13306)/modulith_open?loc=Local&parseTime=true"
     debug: true
 
   sys:
-    link: "mysql:modulith_open:pwd@tcp(localhost:3306)/modulith_open?loc=Local&parseTime=true"
+    link: "mysql:modulith_open:pwd@tcp(106.14.156.6:13306)/modulith_open?loc=Local&parseTime=true"
     debug: true
 
   account:
-    link: "mysql:modulith_open:pwd@tcp(localhost:3306)/modulith_open?loc=Local&parseTime=true"
+    link: "mysql:modulith_open:pwd@tcp(106.14.156.6:13306)/modulith_open?loc=Local&parseTime=true"
     debug: true
 
   pay:
-    link: "mysql:modulith_open:pwd@tcp(localhost:3306)/modulith_open?loc=Local&parseTime=true"
+    link: "mysql:modulith_open:pwd@tcp(106.14.156.6:13306)/modulith_open?loc=Local&parseTime=true"
     debug: true
 
   store:
-    link: "mysql:modulith_open:pwd@tcp(localhost:3306)/modulith_open?loc=Local&parseTime=true"
+    link: "mysql:modulith_open:pwd@tcp(106.14.156.6:13306)/modulith_open?loc=Local&parseTime=true"
     debug: true
 
   pt:
-    link: "mysql:modulith_open:pwd@tcp(localhost:3306)/modulith_open?loc=Local&parseTime=true"
+    link: "mysql:modulith_open:pwd@tcp(106.14.156.6:13306)/modulith_open?loc=Local&parseTime=true"
     debug: true
 
   order:
-    link: "mysql:modulith_open:pwd@tcp(localhost:3306)/modulith_open?loc=Local&parseTime=true"
+    link: "mysql:modulith_open:pwd@tcp(106.14.156.6:13306)/modulith_open?loc=Local&parseTime=true"
     debug: true
 
   shop:
-    link: "mysql:modulith_open:pwd@tcp(localhost:3306)/modulith_open?loc=Local&parseTime=true"
+    link: "mysql:modulith_open:pwd@tcp(106.14.156.6:13306)/modulith_open?loc=Local&parseTime=true"
     debug: true
 
   admin:
-    link: "mysql:modulith_open:pwd@tcp(localhost:3306)/modulith_open?loc=Local&parseTime=true"
+    link: "mysql:modulith_open:pwd@tcp(106.14.156.6:13306)/modulith_open?loc=Local&parseTime=true"
     debug: true
 
   cms:
-    link: "mysql:modulith_open:pwd@tcp(localhost:3306)/modulith_open?loc=Local&parseTime=true"
+    link: "mysql:modulith_open:pwd@tcp(106.14.156.6:13306)/modulith_open?loc=Local&parseTime=true"
     debug: true
 
   marketing:
-    link: "mysql:modulith_open:pwd@tcp(localhost:3306)/modulith_open?loc=Local&parseTime=true"
+    link: "mysql:modulith_open:pwd@tcp(106.14.156.6:13306)/modulith_open?loc=Local&parseTime=true"
     debug: true
 
   trade:
-    link: "mysql:modulith_open:pwd@tcp(localhost:3306)/modulith_open?loc=Local&parseTime=true"
+    link: "mysql:modulith_open:pwd@tcp(106.14.156.6:13306)/modulith_open?loc=Local&parseTime=true"
     debug: true
 
   invoicing:
-    link: "mysql:modulith_open:pwd@tcp(localhost:3306)/modulith_open?loc=Local&parseTime=true"
+    link: "mysql:modulith_open:pwd@tcp(106.14.156.6:13306)/modulith_open?loc=Local&parseTime=true"
     debug: true
 
   sns:
-    link: "mysql:modulith_open:pwd@tcp(localhost:3306)/modulith_open?loc=Local&parseTime=true"
+    link: "mysql:modulith_open:pwd@tcp(106.14.156.6:13306)/modulith_open?loc=Local&parseTime=true"
     debug: true
 
   o2o:
-    link: "mysql:modulith_open:pwd@tcp(localhost:3306)/modulith_open?loc=Local&parseTime=true"
+    link: "mysql:modulith_open:pwd@tcp(106.14.156.6:13306)/modulith_open?loc=Local&parseTime=true"
     debug: true
 
 # Redis 配置示例
