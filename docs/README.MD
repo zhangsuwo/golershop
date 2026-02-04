@@ -3,6 +3,7 @@
 在线文档： https://docs.shopsuite.cn/
 安装部署SQL下载地址：https://www.shopsuite.cn/uploads/sql/shopsuite-001.sql
 
+http://106.14.156.6:8080/admin/#/login
 后台默认账号:admin
 后台默认密码:shopsuite.cn
 
@@ -26,3 +27,11 @@ nohup ./goleshop &
 <!-- 验证8000端口 -->
 netstat -tuln | grep 8080
 后端访问http://106.14.156.6:8080/admin
+<!-- 编译linux错误 -->
+先查看编译报错的地方
+gf build --debug
+升级报错的包
+go list -m github.com/go-pay/gopay
+go get -u github.com/go-pay/gopay
+升级gf
+gf up -a

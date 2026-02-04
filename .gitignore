@@ -40,4 +40,5 @@ output/
 manifest/output/
 temp/
 logs/
+dist/
  

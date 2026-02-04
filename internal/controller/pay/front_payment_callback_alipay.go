@@ -2,6 +2,8 @@ package pay
 
 import (
 	"context"
+	"os"
+
 	"github.com/go-pay/gopay/alipay"
 	"github.com/go-pay/xlog"
 	"github.com/gogf/gf/v2/frame/g"
@@ -13,7 +15,6 @@ import (
 	"golershop.cn/internal/model/do"
 	"golershop.cn/internal/service"
 	"golershop.cn/utility"
-	"os"
 )
 
 // WxReturn 微信支付回调
@@ -160,8 +161,8 @@ func (c *cPaymentCallback) AlipayNotify(ctx context.Context, req *pay.PaymentAli
 	deposit.DepositSellerId = notifyReq.Get("seller_id")
 	deposit.DepositIsTotalFeeAdjust = notifyReq.Get("is_total_fee_adjust")
 
-	deposit.DepositTotalFee = notifyReq.GetInterface("total_amount")
-	deposit.DepositPrice = deposit.DepositTotalFee
+	// deposit.DepositTotalFee = notifyReq.GetInterface("total_amount")
+	// deposit.DepositPrice = deposit.DepositTotalFee
 
 	deposit.DepositBuyerId = notifyReq.Get("buyer_id")
 	deposit.DepositTime = now.UnixMilli()

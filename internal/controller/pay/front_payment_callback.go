@@ -2,6 +2,7 @@ package pay
 
 import (
 	"context"
+
 	"github.com/go-pay/gopay"
 	"github.com/go-pay/gopay/wechat/v3"
 	"github.com/go-pay/xlog"
@@ -48,7 +49,8 @@ func (c *cPaymentCallback) WxNotify(ctx context.Context, req *pay.PaymentWechatN
 	}
 
 	// 通用通知解密（推荐此方法）
-	result, err := notifyReq.DecryptCipherText(string(client.ApiV3Key))
+	// result, err := notifyReq.DecryptCipherText(string(client.ApiV3Key))
+	result, err := notifyReq.DecryptPayCipherText(string(client.ApiV3Key))
 
 	//验证通过
 	//交易号
