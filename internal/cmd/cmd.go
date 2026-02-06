@@ -2,6 +2,7 @@ package cmd
 
 import (
 	"context"
+
 	"github.com/gogf/gf/v2/frame/g"
 	"github.com/gogf/gf/v2/net/ghttp"
 	"github.com/gogf/gf/v2/os/gcmd"
@@ -36,15 +37,11 @@ var (
 
 			// 跨域处理
 			s.Use(service.Middleware().CORS)
-
 			//需要传播给异步流程或者保持和之前逻辑兼容
 			s.Use(service.Middleware().NeverDoneCtx)
-
 			s.Use(service.Middleware().Ctx)
-
 			s.Use(service.Middleware().MiddlewareErrorHandler)
 			s.Use(service.Middleware().MiddlewareHandlerResponse)
-
 			s.Use(service.Middleware().CheckLogin)
 
 			s.Group("/", func(group *ghttp.RouterGroup) {
@@ -147,7 +144,6 @@ var (
 
 			//config init
 			service.ConfigBase().Init(ctx)
-
 			s.Run()
 			return nil
 		},

@@ -6,6 +6,7 @@
 http://106.14.156.6:8080/admin/#/login
 后台默认账号:admin
 后台默认密码:shopsuite.cn
+接口文档：http://106.14.156.6:8080/swagger
 
 Golang 版本演示站：
 移动端： https://demo.golershop.cn/h5
@@ -24,7 +25,7 @@ mkdir manifest/config
 mkdir resource/public
 <!-- 后台执行 -->
 nohup ./goleshop &
-<!-- 验证8000端口 -->
+<!-- 验证8080端口 -->
 netstat -tuln | grep 8080
 后端访问http://106.14.156.6:8080/admin
 <!-- 编译linux错误 -->

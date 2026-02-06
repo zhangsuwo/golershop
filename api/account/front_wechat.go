@@ -6,7 +6,7 @@ import (
 )
 
 type IndexReq struct {
-	g.Meta    `path:"/front/account/wechat/index" tags:"login" method:"post" method:"post,get" summary:"验证签名"`
+	g.Meta    `path:"/front/account/wechat/index" tags:"login" method:"post,get" summary:"验证签名"`
 	Timestamp string `json:"timestamp"` //
 	Signature string `json:"signature"` //
 	Nonce     string `json:"nonce"`     //
